@@ -56,6 +56,7 @@ $rootFontSize: 16;
 // Основные цвета
 $mainColor: #000; // Цвет шрифта по умолчанию
 $mainDarkColor: #141414;
+$mainMainOrange: #e8aa31;
 
 // Настройки ==========
 // Минимальная ширина страницы
@@ -110,7 +111,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden; // так же прячет выступающие position: absolute;
   // Сайт загружен
   .loaded & {
   }

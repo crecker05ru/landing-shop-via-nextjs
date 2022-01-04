@@ -14,6 +14,8 @@
 }
 .top-header {
     padding: rem(10) 0;
+    background-color: $mainDarkColor;
+    color: #fff;
     // .top-header__container
     &__container{
         display: flex;
@@ -133,7 +135,7 @@
 
     }
     &__favorite {
-
+        font-size: rem(27);
     }
     &__cart{
 
@@ -156,8 +158,15 @@
     &__arrow{
         color: #e8aa31;
         font-size: rem(10);
+        transition: transform 0.5s ease 0s;
         margin: 0px 0px 0px em(17,16);
+        &._active{
+            transform: rotate(-180deg);
+        }
         &:hover{
+            transform: rotate(-180deg);
+        }
+        &:checked{
             
         }
     } 
@@ -168,8 +177,10 @@
         top: 100%;
         width: 100%;
         left: 0;
+        margin: rem(5) 0px 0px 0px;
         background-color: #fff;
         padding: rem(15);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         li {
             &:not(:last-child) {
                 margin-bottom: em(8, 18);
@@ -177,23 +188,130 @@
         }
     }
     &__callback{
-
+        margin: rem(3) 0px 0px 0px;
+        font-weight: 700;
+        line-height: math.div(22,18);
+        color: #e8aa31;
     }
 }
-.cart-header{
-    &__icon{
-
+.cart-header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    &__icon {
+        flex: 0 0 37px;
+        font-size: rem(35);
+        position: relative;
+        span {
+            position: absolute;
+            width: rem(14);
+            height: rem(14);
+            background: #e8aa31;
+            font-size:  rem(7);
+            border-radius: 50%;
+            display: flex;
+            top: 0;
+            right: 0;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__body{
-
+        line-height: math.div(20,16);
+        font-size: rem(16);
     }
     &__summ{
-
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: em(5, 16);
+        }
     }
     &__link{
-        
+        color: #e8aa31;
     }
 }
+
+.catalog-header {
+    background-color: $mainDarkColor;
+    color: #fff;
+    position: relative;
+    &__container {
+
+    }
+    &__menu {
+
+    }
+}
+.menu-catalog {
+    &__list {
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    &__item {
+        
+    }
+    &__link {
+        min-height: rem(70);
+        padding: 0px rem(10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        &::after {
+            content: "";
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            bottom: 0;
+            left: rem(10);
+            height: 1px;
+            width: calc(100% - rem(20));
+            background-color: #e8aa31;
+        }
+    }
+    &__sub-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        background-color: $mainDarkColor;
+    }
+}
+.sub-menu-catalog {
+    &__block {
+        padding: 0px rem(10);
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    &__column {
+        flex: 1 1 auto;
+        display: grid;
+    }
+    &__category {
+        font-size: rem(16);
+        line-height: math.div(20, 16);
+        font-weight: 700;
+        padding: rem(30) 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    &__list {
+
+    }
+    &__item {
+
+    }
+    &__link {
+
+    }
+    &__all {
+
+    }
+}
+
 //=======
 //Burger
 .icon-menu {

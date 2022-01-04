@@ -55,7 +55,40 @@ export default function Header() {
                     </div>
                 </div>              
             </div>
-            <div className="header__catalog catalog-header"></div>
+            <div className="header__catalog catalog-header">
+                <div className="catalog-header__container">
+                    <nav className="catalog-header__menu menu-catalog">
+                        <ul className="menu-catalog__list">
+                            <li className="menu-catalog__item"><a href="" className="menu-catalog__link">Каталог ножей</a></li>
+                            <li className="menu-catalog__item"><a href="" className="menu-catalog__link">Клинковое оружие</a></li>
+                            <li className="menu-catalog__item"><a href="" className="menu-catalog__link">Сувенирные изделия</a></li>
+                            <li className="menu-catalog__item"><a href="" className="menu-catalog__link">Фонария ARMYTEK</a></li>
+                            <li className="menu-catalog__item"><a href="" className="menu-catalog__link">Сопутсвующие товары</a></li>
+                        </ul>
+                        <div className="menu-catalog__sub-menu sub-menu-catalog">
+                            <div className="sub-menu-catalog__container">
+                             <div className="sub-menu-catalog__block">
+                                <div className="sub-menu-catalog__column">
+                                    <a href="" className="sub-menu-catalog__category">Категория ножей</a>
+                                    <ul className="sub-menu-catalog__list">
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Разделочные ножи</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Туристические ножи</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Ножи охотничьи</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Булатные ножи</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Ножи из дамаска</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Тактического назначения</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Метательные ножи</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Мачете и кукри</a></li>
+                                        <li className="sub-menu-catalog__item"><a href="" className="sub-menu-catalog__link">Ножи кухонные</a></li>
+                                    </ul>
+                                        <a href="" className="sub-menu-catalog__all">Смотреть все</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </header>
     )
 }
