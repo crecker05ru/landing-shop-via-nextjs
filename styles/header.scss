@@ -59,6 +59,14 @@
     &__link {
         font-size: rem(16);
         line-height: math.div(20, 16);
+        @media (any-hover: hover){
+            &:hover {
+                span {
+                    text-decoration: underline;
+                }
+                
+            }
+        }
     }
 }
 .body-header {
@@ -192,6 +200,11 @@
         font-weight: 700;
         line-height: math.div(22,18);
         color: #e8aa31;
+        @media (any-hover: hover){
+            &:hover {
+                    text-decoration: underline;     
+            }
+        }
     }
 }
 .cart-header {
@@ -229,6 +242,11 @@
     }
     &__link{
         color: #e8aa31;
+        @media (any-hover: hover){
+            &:hover {
+                    text-decoration: underline;     
+            }
+        }
     }
 }
 
@@ -260,6 +278,7 @@
         align-items: center;
         text-align: center;
         position: relative;
+        transition: color 0.3s ease 0s;
         &::after {
             content: "";
             opacity: 0;
@@ -270,45 +289,102 @@
             height: 1px;
             width: calc(100% - rem(20));
             background-color: #e8aa31;
+            transition: all 0.3s ease 0s;
+        }
+        // @media (any-hover: hover){
+            &:hover {
+                color:#e8aa31;
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }   
+            }
+        // }
+        &_sub-menu-active {
+            color:#e8aa31;
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            } 
         }
     }
     &__sub-menu {
-        position: absolute;
         width: 100%;
         left: 0;
         top: 100%;
         background-color: $mainDarkColor;
+        &_sub-menu-show {
+
+        }
+
+        // &:hover{
+        //     opacity: 0;
+        //     visibility:visible;
+        // }
     }
 }
 .sub-menu-catalog {
+    padding-bottom: rem(30);
     &__block {
-        padding: 0px rem(10);
-        display: flex;
-        gap: 15px;
+        display: none;
+        // gap: 15px;
         justify-content: space-between;
+        &_sub-menu-open {
+            display: flex;
+        }
     }
     &__column {
         flex: 1 1 auto;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        // gap:30px;
     }
     &__category {
         font-size: rem(16);
         line-height: math.div(20, 16);
         font-weight: 700;
-        padding: rem(30) 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: rem(30) rem(10);
+
+            @media (any-hover: hover){
+            &:hover {
+                    text-decoration: underline;     
+            }
+        }
     }
     &__list {
-
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: rem(30) rem(10);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
     &__item {
 
     }
     &__link {
-
+        font-size: rem(16);
+        line-height: math.div(20,16);
+        // @media (any-hover: hover){
+        //     &:hover {
+        //             text-decoration: underline;     
+        //     }
+        // }
+        &:hover {
+            text-decoration: underline;     
+        }
     }
     &__all {
-
+        align-self: flex-start;
+        font-size: rem(16);
+        color: #e8aa31;
+        padding-top: rem(10);
+        padding-left: rem(10);
+        padding-right: rem(10);
+        &:hover {
+            text-decoration: underline;     
+            }
     }
 }
 
